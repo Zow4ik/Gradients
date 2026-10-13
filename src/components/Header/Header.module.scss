@@ -1,0 +1,10 @@
+.header {
+  border-bottom: var(--border);
+}
+
+.headerContainer {
+  justify-content: space-between;
+  padding-block: 16px;
+  align-items: center;
+  gap: 40px;
+}
