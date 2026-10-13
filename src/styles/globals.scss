@@ -1,0 +1,10 @@
+body {
+  background-color: var(--background-main);
+}
+
+.container {
+  display: flex;
+  max-width: calc( var(--container) + var(--container-x) * 2 );
+  padding-inline: var(--container-x);
+  margin: 0 auto;
+}
