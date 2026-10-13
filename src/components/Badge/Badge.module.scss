@@ -4,6 +4,7 @@
   line-height: 1.45;
   text-align: center;
   color: #afc6ff;
+  text-transform: uppercase;
 }
 
 .background {
@@ -13,6 +14,7 @@
   background-color: #21262d;
   padding: 7px 15px 7px 28px;
   position: relative;
+  text-transform: none;
 
   &::after {
     content: '';

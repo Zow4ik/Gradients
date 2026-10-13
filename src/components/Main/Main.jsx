@@ -1,9 +1,9 @@
-import styles from './Main.module.scss'
-import Title from '@/components/Title/Title.jsx'
+import Advantages from '@/components/Advantages/Advantages.jsx'
 
 const Main = () => {
   return (
     <main>
+      <Advantages />
     </main>
   )
 }

@@ -1,0 +1,22 @@
+.advantagesContainer {
+  flex-direction: column;
+  padding-block: 40px;
+
+  & > h2 {
+    margin-bottom: 40px;
+  }
+
+  & > span {
+    margin-bottom: 4pxS;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
