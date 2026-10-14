@@ -1,0 +1,23 @@
+.text {
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: var(--color-white);
+  padding: 14px 32px 14px 60px;
+  box-shadow: 0 4px 6px -4px rgba(110, 64, 201, 0.25), 0 10px 15px -3px rgba(110, 64, 201, 0.25);
+  background: var(--color-button);
+  border-radius: var(--border-radius);
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url("/images/upload.svg");
+    width: 20px;
+    height: 24px;
+    left: 32px;
+    top: 50%;
+    translate: 0 -50%;
+  }
+}

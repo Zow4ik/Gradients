@@ -27,3 +27,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 500px) {
+  .h1 {
+    font-size: 48px;
+  }
+}
