@@ -8,7 +8,7 @@ const Advantages = () => {
     {
       nameImage: 'photo-to-grad.svg',
       title: 'Photo to Gradient',
-      span: 'Extract palette instantly.',
+      subtext: 'Extract palette instantly.',
       text: 'Intelligent color quantization extracts dominant, vibrant\n' +
         'tones in milliseconds, skipping washed-out intermediate\n' +
         'pixels.',
@@ -16,7 +16,7 @@ const Advantages = () => {
     {
       nameImage: 'live-css-preview.svg',
       title: 'Live CSS Preview',
-      span: 'Copy code in one click.',
+      subtext: 'Copy code in one click.',
       text: 'Clean CSS syntax, Tailwind CSS configuration snippets, or\n' +
         'SVG linear gradient definitions ready to drop straight into\n' +
         'your stylesheet.',
@@ -24,7 +24,7 @@ const Advantages = () => {
     {
       nameImage: 'zero-api.svg',
       title: 'Zero API',
-      span: 'Works entirely in your browser.',
+      subtext: 'Works entirely in your browser.',
       text: 'Client-side WebGL and HTML5 Canvas parsing. No server\n' +
         'uploads, zero network latency, total personal image privacy.',
     },
@@ -33,15 +33,15 @@ const Advantages = () => {
   return (
     <section>
       <div className={`container ${styles.advantagesContainer}`}>
-        <Badge>Built for Designers & Developers</Badge>
-        <Title title='h2'>Effortless gradient extraction</Title>
+        <Badge additionalClasses={styles.badgeText}>Built for Designers & Developers</Badge>
+        <Title title='h2' additionalClasses={styles.title}>Effortless gradient extraction</Title>
         <ul className={styles.list}>
           {cardsInfo.map((card) => (
             <Card
               key={card.title}
               nameImage={card.nameImage}
               title={card.title}
-              span={card.span}
+              subtext={card.subtext}
               text={card.text}
             />
           ))}

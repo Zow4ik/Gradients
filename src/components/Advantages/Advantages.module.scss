@@ -1,14 +1,14 @@
 .advantagesContainer {
   flex-direction: column;
   padding-block: 40px;
+}
 
-  & > h2 {
-    margin-bottom: 40px;
-  }
+.badgeText {
+  margin-bottom: 4px;
+}
 
-  & > span {
-    margin-bottom: 4pxS;
-  }
+.title {
+  margin-bottom: 40px;
 }
 
 .list {

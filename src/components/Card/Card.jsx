@@ -5,7 +5,7 @@ const Card = (props) => {
   const {
     nameImage,
     title,
-    span,
+    subtext,
     text,
   } = props
 
@@ -19,8 +19,8 @@ const Card = (props) => {
         height="48"
         loading="lazy"
       />
-      <Title title='h3'>{title}</Title>
-      <span className={styles.span}>{span}</span>
+      <Title title='h3' additionalClasses={styles.title}>{title}</Title>
+      <span className={styles.subtext}>{subtext}</span>
       <p className={styles.text}>{text}</p>
     </li>
   )
