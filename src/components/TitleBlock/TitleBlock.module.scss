@@ -1,0 +1,54 @@
+.titleContainer {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.badge {
+  margin-bottom: 22px;
+  align-self: center;
+}
+
+.title {
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: var(--color-grey);
+}
+
+.uploadButton {
+  margin-bottom: 12px;
+}
+
+.textContainer {
+  display: flex;
+  align-self: center;
+  gap: 15px;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-grey);
+  position: relative;
+
+  &:first-child::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    translate: 0 -50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #30363d;
+  }
+}
