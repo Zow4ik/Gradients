@@ -6,6 +6,7 @@ const GradientWorkspace = () => {
   const {
     file,
     performance,
+    dominantColors,
   } = useContext(GeneratorContext)
 
   return (
@@ -23,7 +24,19 @@ const GradientWorkspace = () => {
         </div>
         <span className={styles.performance}>{performance}</span>
       </div>
-      <div>некст блок</div>
+      <div className={styles.mainContainer}>
+        <div className={styles.imageContainer}>
+          <img
+            src="/Gradients/images/default-image-generator.jpg"
+            alt=""
+            width=""
+            height=""
+            loading="lazy"
+          />
+          <span className={styles.imageText}>{dominantColors}</span>
+        </div>
+        <div>правый блок</div>
+      </div>
     </div>
   )
 }
