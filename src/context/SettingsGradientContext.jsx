@@ -8,7 +8,7 @@ export const SettingsGradientProvider = (props) => {
   } = props
 
   const testInfo = {
-    gradientMode: 'linear',
+    gradientMode: 'Linear',
     angle: 32,
     shape: 'circle',
     blend: 'normal',

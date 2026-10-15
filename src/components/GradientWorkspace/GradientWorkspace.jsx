@@ -2,6 +2,7 @@ import styles from './GradientWorkspace.module.scss'
 import {useContext} from 'react'
 import {GeneratorContext} from '@/context/GeneratorContext.jsx'
 import ExtractColors from '@/components/ExtractColors/ExtractColors.jsx'
+import GradientMode from '@/components/GradientMode/GradientMode.jsx'
 
 const GradientWorkspace = () => {
   const {
@@ -36,8 +37,9 @@ const GradientWorkspace = () => {
           />
           <span className={styles.imageText}>{dominantColors}</span>
         </div>
-        <div>
+        <div className={styles.toolsContainer}>
           <ExtractColors />
+          <GradientMode />
         </div>
       </div>
     </div>
