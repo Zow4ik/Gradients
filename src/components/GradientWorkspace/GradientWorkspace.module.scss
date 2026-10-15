@@ -1,0 +1,81 @@
+.GradientWorkspaceContainer {
+  max-width: 1150px;
+  margin: 0 auto 0 auto;
+  border: var(--border);
+  border-radius: calc( var(--border-radius) * 1.333 );
+  overflow: hidden;
+}
+
+.headerContainer {
+  padding: 16px;
+  position: relative;
+  background-color: #11161d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(48, 54, 61, 0.4);
+  }
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nameFile {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-grey);
+}
+
+.performance {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--color-grey);
+  text-transform: uppercase;
+  padding: 5px 10px 5px 23px;
+  border: var(--border);
+  border-radius: 4px;
+  background-color: #0a0e14;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffb693;
+    left: 10px;
+    top: 50%;
+    translate: 0 -50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

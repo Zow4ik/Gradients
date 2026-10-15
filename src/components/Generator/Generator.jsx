@@ -1,5 +1,7 @@
 import styles from './Generator.module.scss'
 import TitleBlock from '@/components/TitleBlock/TitleBlock.jsx'
+import GradientWorkspace
+  from '@/components/GradientWorkspace/GradientWorkspace.jsx'
 
 const Generator = () => {
   return (
@@ -14,6 +16,7 @@ const Generator = () => {
           spanText2='PNG, JPG, WebP up to 25MB'
         />
       </div>
+      <GradientWorkspace />
     </section>
   )
 }
