@@ -13,7 +13,7 @@ const GradientWorkspace = () => {
   } = useContext(GeneratorContext)
 
   return (
-    <div className={styles.GradientWorkspaceContainer}>
+    <div>
       <div className={styles.headerContainer}>
         <div className={styles.headerLeft}>
           <img
