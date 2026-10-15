@@ -4,12 +4,15 @@ import App from './App.jsx'
 import './styles/index.js'
 import {GeneratorProvider} from '@/context/GeneratorContext.jsx'
 import {PaletteProvider} from '@/context/PaletteContext.jsx'
+import {SettingsGradientProvider} from '@/context/SettingsGradientContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <GeneratorProvider>
       <PaletteProvider>
-        <App />
+        <SettingsGradientProvider>
+          <App />
+        </SettingsGradientProvider>
       </PaletteProvider>
     </GeneratorProvider>
   </StrictMode>,
