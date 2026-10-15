@@ -7,13 +7,13 @@ export const PaletteProvider = (props) => {
     children,
   } = props
 
-  const testInfo = [
-    [255, 255, 0], [222, 111, 0], [0, 111, 222], [222, 111, 222],
-  ]
+  const testInfo = ['#FF6B6B', '#FFA07A', '#6E40C9', '#1F6FEB',]
 
   return (
     <PaletteContext.Provider
-      value={testInfo}
+      value={{
+        testInfo,
+      }}
     >
       {children}
     </PaletteContext.Provider>

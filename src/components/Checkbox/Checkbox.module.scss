@@ -1,0 +1,23 @@
+.input {}
+
+.emulator {
+  width: 16px;
+  height: 16px;
+  display: block;
+  border: 1px solid rgba(149, 153, 159, 0.4);
+  border-radius: 2px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    color: #ffffff;
+    font-size: 12px;
+    left: 3px;
+    top: -1px;
+  }
+}
+
+.input:checked + .emulator::after {
+  content: '✔';
+}

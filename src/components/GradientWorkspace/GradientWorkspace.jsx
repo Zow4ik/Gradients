@@ -1,6 +1,7 @@
 import styles from './GradientWorkspace.module.scss'
 import {useContext} from 'react'
 import {GeneratorContext} from '@/context/GeneratorContext.jsx'
+import ExtractColors from '@/components/ExtractColors/ExtractColors.jsx'
 
 const GradientWorkspace = () => {
   const {
@@ -35,7 +36,9 @@ const GradientWorkspace = () => {
           />
           <span className={styles.imageText}>{dominantColors}</span>
         </div>
-        <div>правый блок</div>
+        <div>
+          <ExtractColors />
+        </div>
       </div>
     </div>
   )

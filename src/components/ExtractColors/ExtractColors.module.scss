@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.45;
+  text-transform: uppercase;
+  color: var(--color-grey);
+}
+
+.button {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-grey);
+  position: relative;
+  padding-left: 17px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url("/Gradients/images/manage.svg");
+    width: 15px;
+    height: 16px;
+    left: -2px;
+    top: 50%;
+    translate: 0 -50%;
+  }
+}
+
+.colorContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.colorDecor {
+  height: 14px;
+  width: 14px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.colorText {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 7px 33px 7px 15px;
+  align-items: center;
+  background-color: rgba(33, 38, 45, 0.6);
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
