@@ -1,0 +1,126 @@
+.container {
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: rgba(33, 38, 45, 0.4);
+  padding: 11px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerOptions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+
+  @media (max-width: 550px) {
+    & {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.containerContent {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.textOption {
+  font-size: 11px;
+  line-height: 2;
+  color: var(--color-grey);
+}
+
+.select {
+  border: var(--border);
+  border-radius: 4px;
+  background: #0a0e14;
+  font-size: 11px;
+  line-height: 2.18;
+  color: var(--color-white);
+  padding: 3px;
+}
+
+.checkbox {}
+
+.emulator {
+  width: 24px;
+  height: 14px;
+  background-color: #30363d;
+  border-radius: 8px;
+  display: block;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+    top: 50%;
+    left: 2px;
+    translate: 0 -50%;
+  }
+}
+
+.checkbox:checked + .emulator {
+  background: var(--color-span);
+
+  &::after {
+    background-color: #0a0e14;
+    border: 1px solid #ffffff;
+    left: calc(100% - 12px);
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.buttonStop {
+  font-size: 11px;
+  line-height: 2;
+  text-align: center;
+  color: var(--color-grey);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding-block: 6px;
+
+  &.special {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 2;
+    text-align: center;
+    color: var(--color-white);
+    padding: 5px 11px;
+    background: #21262d;
+    border: var(--border);
+    border-radius: 4px;
+
+    span {
+      font-size: 10px;
+      line-height: 2.2;
+      color: var(--color-grey);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

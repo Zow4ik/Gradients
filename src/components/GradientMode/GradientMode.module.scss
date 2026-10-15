@@ -12,6 +12,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
+
+  @media (max-width: 550px) {
+    & {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .mode {

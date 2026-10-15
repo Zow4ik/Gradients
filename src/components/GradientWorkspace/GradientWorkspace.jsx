@@ -3,6 +3,7 @@ import {useContext} from 'react'
 import {GeneratorContext} from '@/context/GeneratorContext.jsx'
 import ExtractColors from '@/components/ExtractColors/ExtractColors.jsx'
 import GradientMode from '@/components/GradientMode/GradientMode.jsx'
+import StopEditor from '@/components/StopEditor/StopEditor.jsx'
 
 const GradientWorkspace = () => {
   const {
@@ -40,6 +41,7 @@ const GradientWorkspace = () => {
         <div className={styles.toolsContainer}>
           <ExtractColors />
           <GradientMode />
+          <StopEditor />
         </div>
       </div>
     </div>
