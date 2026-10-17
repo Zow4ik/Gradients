@@ -15,6 +15,10 @@ export const GeneratorProvider = (props) => {
     performance: '14',
   })
 
+  const updatePerformance = (ms) => {
+    setInfo((prev) => ({ ...prev, performance: ms }))
+  }
+
   async function updateImage(file) {
     try {
       const result = await squish(file, 700)
@@ -44,6 +48,7 @@ export const GeneratorProvider = (props) => {
       value={{
         ...info,
         updateImage,
+        updatePerformance,
       }}
     >
       {children}

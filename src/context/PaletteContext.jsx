@@ -15,7 +15,7 @@ const createStopsFromColors = (colorArray) => {
 }
 
 export const PaletteProvider = ({ children }) => {
-  const { imageUrl } = useContext(GeneratorContext)
+  const { imageUrl, updatePerformance } = useContext(GeneratorContext)
 
   const defaultColors = ['#FF6B6B', '#FFA07A', '#6E40C9', '#1F6FEB']
 
@@ -31,8 +31,14 @@ export const PaletteProvider = ({ children }) => {
 
     img.onload = () => {
       try {
+        const startPerformance = performance.now()
+
         const palette = getPaletteSync(img, { colorCount: 4 })
         const hexColors = palette.map(color => color.hex())
+
+        const endPerformance = performance.now()
+        const durationPerformance = (endPerformance - startPerformance).toFixed()
+        updatePerformance(durationPerformance)
 
         setOriginalColors(hexColors)
         setColors(hexColors)

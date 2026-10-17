@@ -13,7 +13,7 @@ const ExtractColors = () => {
     <div>
       <div className={styles.header}>
         <span className={styles.text}>Extracted Swatches</span>
-        <button className={styles.button}>Manage</button>
+        {/*<button className={styles.button}>Manage</button>*/}
       </div>
       <ul className={styles.list}>
         {colors.map((color) => (
