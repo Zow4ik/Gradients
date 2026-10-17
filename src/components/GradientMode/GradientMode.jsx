@@ -22,6 +22,10 @@ const GradientMode = () => {
     { nameImage: 'mesh', text: 'Mesh' },
   ]
 
+  const angleShow = ['Linear', 'Conic', 'Rep. Lin'].includes(gradientMode)
+  const shapeShow = ['Radial', 'Rep. Rad'].includes(gradientMode)
+  const positionShow = ['Radial', 'Conic', 'Rep. Rad'].includes(gradientMode)
+
   return (
     <div className={styles.gradientMode}>
       <div className={styles.containerContent}>
@@ -47,35 +51,43 @@ const GradientMode = () => {
           </button>
         ))}
       </div>
-      <div className={styles.containerContent}>
-        <span className={styles.angle}>Angle</span>
-        <span className={styles.angleDegree}>{angle}°</span>
-      </div>
-      <div>
-        <CustomSingleRange />
-      </div>
-      <div className={styles.containerContent}>
-        <div className={styles.containerContent}>
-          <span className={styles.shape}>Shape:</span>
+      {angleShow && (
+        <>
           <div className={styles.containerContent}>
-            <button
-              onClick={() => changeShape('ellipse')}
-              className={`${styles.shapeButton} ${shape === 'ellipse' ? styles.active : ''}`}
-            >
-              Ellipse
-            </button>
-            <button
-              onClick={() => changeShape('circle')}
-              className={`${styles.shapeButton} ${shape === 'circle' ? styles.active : ''}`}
-            >
-              Circle
-            </button>
+            <span className={styles.angle}>Angle</span>
+            <span className={styles.angleDegree}>{angle}°</span>
           </div>
-        </div>
-        <p className={styles.pos}>
-          <span>Pos: </span>
-          Center (50% 50%)
-        </p>
+          <div>
+            <CustomSingleRange />
+          </div>
+        </>
+      )}
+      <div className={styles.containerContent}>
+        {shapeShow && (
+          <div className={styles.containerContent}>
+            <span className={styles.shape}>Shape:</span>
+            <div className={styles.containerContent}>
+              <button
+                onClick={() => changeShape('ellipse')}
+                className={`${styles.shapeButton} ${shape === 'ellipse' ? styles.active : ''}`}
+              >
+                Ellipse
+              </button>
+              <button
+                onClick={() => changeShape('circle')}
+                className={`${styles.shapeButton} ${shape === 'circle' ? styles.active : ''}`}
+              >
+                Circle
+              </button>
+            </div>
+          </div>
+        )}
+        {positionShow && (
+          <p className={styles.pos}>
+            <span>Pos: </span>
+            Center (50% 50%)
+          </p>
+        )}
       </div>
     </div>
   )
