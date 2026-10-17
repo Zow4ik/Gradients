@@ -1,15 +1,10 @@
-import { useState, useRef } from 'react'
+import { useRef, useContext } from 'react'
 import styles from './CustomMultiRange.module.scss'
+import { PaletteContext } from '@/context/PaletteContext.jsx'
 
 function CustomMultiRange() {
-  const initial_stops = [
-    { id: '1', color: '#FF6B6B', position: 0 },
-    { id: '2', color: '#FFA07A', position: 25 },
-    { id: '3', color: '#6E40C9', position: 65 },
-    { id: '4', color: '#1F6FEB', position: 100 },
-  ]
+  const { stops, setStops } = useContext(PaletteContext)
 
-  const [stops, setStops] = useState(initial_stops)
   const trackRef = useRef(null)
   const dragRef = useRef(null)
 
@@ -29,11 +24,8 @@ function CustomMultiRange() {
       if (index === -1) return prev
 
       const MIN_GAP = 2
-
       const minPos = index > 0 ? prev[index - 1].position + MIN_GAP : 0
-      const maxPos =
-        index < prev.length - 1 ? prev[index + 1].position - MIN_GAP : 100
-
+      const maxPos = index < prev.length - 1 ? prev[index + 1].position - MIN_GAP : 100
       const clamped = Math.max(minPos, Math.min(maxPos, Math.round(raw)))
 
       return prev.map((s) =>

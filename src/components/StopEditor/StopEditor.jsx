@@ -1,16 +1,28 @@
 import styles from './StopEditor.module.scss'
 import CustomMultiRange from '@/components/CustomMultiRange/CustomMultiRange.jsx'
 import Select from '@/components/Select/Select.jsx'
-import {useContext} from 'react'
-import {SettingsGradientContext} from '@/context/SettingsGradientContext.jsx'
+import { useContext } from 'react'
+import { SettingsGradientContext } from '@/context/SettingsGradientContext.jsx'
+import { PaletteContext } from '@/context/PaletteContext.jsx' // 1. Импортируем контекст палитры
 
 const StopEditor = () => {
   const {
     blend,
     space,
+    grain,
     changeBlend,
     changeSpace,
+    changeGrain,
   } = useContext(SettingsGradientContext)
+
+  // 2. Достаем стопы и функции управления из контекста палитры
+  const {
+    stops,
+    addStop,
+    removeStop,
+    reverseStops,
+    resetStops
+  } = useContext(PaletteContext)
 
   return (
     <div className={styles.container}>
@@ -34,7 +46,12 @@ const StopEditor = () => {
           />
         </div>
         <label className={styles.containerContent}>
-          <input type='checkbox' className={`visually-hidden ${styles.checkbox}`}/>
+          <input
+            checked={grain}
+            onChange={(event) => changeGrain(event.target.checked)}
+            type='checkbox'
+            className={`visually-hidden ${styles.checkbox}`}
+          />
           <span className={styles.emulator}></span>
           <span className={styles.textOption}>Grain</span>
         </label>
@@ -43,12 +60,20 @@ const StopEditor = () => {
         <CustomMultiRange />
       </div>
       <div className={styles.containerOptions}>
-        <button className={`${styles.buttonStop} ${styles.special}`}>
-          +  Add Stop
-          <span>(4/4)</span>
+        <button
+          className={`${styles.buttonStop} ${styles.special}`}
+          onClick={addStop}
+          disabled={stops.length >= 4}
+        >
+          + Add Stop
+          <span>({stops.length}/4)</span>
         </button>
         <div className={styles.buttonContainer}>
-          <button className={styles.buttonStop}>
+          <button
+            className={styles.buttonStop}
+            onClick={removeStop}
+            disabled={stops.length <= 2}
+          >
             <img
               src="/Gradients/images/remove.svg"
               alt=""
@@ -56,9 +81,12 @@ const StopEditor = () => {
               height="16"
               loading="lazy"
             />
-            Remove
+            Remove stop
           </button>
-          <button className={styles.buttonStop}>
+          <button
+            className={styles.buttonStop}
+            onClick={reverseStops}
+          >
             <img
               src="/Gradients/images/reverse.svg"
               alt=""
@@ -68,7 +96,10 @@ const StopEditor = () => {
             />
             Reverse
           </button>
-          <button className={styles.buttonStop}>
+          <button
+            className={styles.buttonStop}
+            onClick={resetStops}
+          >
             <img
               src="/Gradients/images/reset.svg"
               alt=""

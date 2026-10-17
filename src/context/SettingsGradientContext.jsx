@@ -13,7 +13,7 @@ export const SettingsGradientProvider = (props) => {
     shape: 'circle',
     blend: 'normal',
     space: 'oklch',
-    grain: 'off',
+    grain: false,
     countStops: 4,
   })
 
@@ -54,6 +54,13 @@ export const SettingsGradientProvider = (props) => {
     }))
   }
 
+  function changeGrain(newGrain) {
+    setSettings((prev) => ({
+      ...prev,
+      grain: newGrain,
+    }))
+  }
+
   return (
     <SettingsGradientContext.Provider
       value={{
@@ -63,6 +70,7 @@ export const SettingsGradientProvider = (props) => {
         changeAngle,
         changeBlend,
         changeSpace,
+        changeGrain,
       }}
     >
       {children}
