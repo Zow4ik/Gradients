@@ -13,7 +13,6 @@ export const GeneratorProvider = (props) => {
     nameFile: 'sunset-over-california.jpg — Palette Extracted',
     imageUrl: null,
     performance: '14',
-    dominantColors: null,
   })
 
   async function updateImage(file) {

@@ -2,10 +2,11 @@ import styles from './ExtractColors.module.scss'
 import {useContext} from 'react'
 import {PaletteContext} from '@/context/PaletteContext.jsx'
 import Checkbox from '@/components/Checkbox/Checkbox.jsx'
+import {closest} from 'color-2-name'
 
 const ExtractColors = () => {
   const {
-    testInfo,
+    colors,
   } = useContext(PaletteContext)
 
   return (
@@ -15,14 +16,20 @@ const ExtractColors = () => {
         <button className={styles.button}>Manage</button>
       </div>
       <ul className={styles.list}>
-        {testInfo.map((item) => (
-          <li className={styles.item} key={crypto.randomUUID()}>
+        {colors.map((color) => (
+          <li
+            className={styles.item}
+            key={crypto.randomUUID()}
+          >
             <div className={styles.colorContainer}>
-              <Checkbox />
-              <span className={styles.colorDecor}></span>
-              <span className={styles.colorText}>название цвета</span>
+              {/*<Checkbox />*/}
+              <span
+                style={{backgroundColor: color,}}
+                className={styles.colorDecor}
+              ></span>
+              <span className={styles.colorText}>{closest(color).name}</span>
             </div>
-            <span className={styles.text}>{item}</span>
+            <span className={styles.text}>{color}</span>
           </li>
         ))}
       </ul>

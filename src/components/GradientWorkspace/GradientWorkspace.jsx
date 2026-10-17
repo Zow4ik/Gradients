@@ -4,14 +4,18 @@ import {GeneratorContext} from '@/context/GeneratorContext.jsx'
 import ExtractColors from '@/components/ExtractColors/ExtractColors.jsx'
 import GradientMode from '@/components/GradientMode/GradientMode.jsx'
 import StopEditor from '@/components/StopEditor/StopEditor.jsx'
+import {PaletteContext} from '@/context/PaletteContext.jsx'
 
 const GradientWorkspace = () => {
   const {
     nameFile,
     performance,
-    dominantColors,
     imageUrl,
   } = useContext(GeneratorContext)
+
+  const {
+    dominantColors,
+  } = useContext(PaletteContext)
 
   let image = null
 
@@ -49,7 +53,7 @@ const GradientWorkspace = () => {
       <div className={styles.mainContainer}>
         <div className={styles.imageContainer}>
           {image}
-          <span className={styles.imageText}>{dominantColors}</span>
+          <span className={styles.imageText}>{dominantColors} Dominant Samples</span>
         </div>
         <div className={styles.toolsContainer}>
           <ExtractColors />
