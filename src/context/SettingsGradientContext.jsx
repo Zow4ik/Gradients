@@ -17,6 +17,8 @@ export const SettingsGradientProvider = (props) => {
     countStops: 4,
   })
 
+  console.log(settings)
+
   function changeModeGradient(newMode) {
     setSettings((prev) => ({
       ...prev,
@@ -38,6 +40,20 @@ export const SettingsGradientProvider = (props) => {
     }))
   }
 
+  function changeBlend(newBlend) {
+    setSettings((prev) => ({
+      ...prev,
+      blend: newBlend,
+    }))
+  }
+
+  function changeSpace(newSpace) {
+    setSettings((prev) => ({
+      ...prev,
+      space: newSpace,
+    }))
+  }
+
   return (
     <SettingsGradientContext.Provider
       value={{
@@ -45,6 +61,8 @@ export const SettingsGradientProvider = (props) => {
         changeModeGradient,
         changeShape,
         changeAngle,
+        changeBlend,
+        changeSpace,
       }}
     >
       {children}

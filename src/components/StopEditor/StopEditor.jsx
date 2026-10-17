@@ -1,27 +1,37 @@
 import styles from './StopEditor.module.scss'
 import CustomMultiRange from '@/components/CustomMultiRange/CustomMultiRange.jsx'
+import Select from '@/components/Select/Select.jsx'
+import {useContext} from 'react'
+import {SettingsGradientContext} from '@/context/SettingsGradientContext.jsx'
 
 const StopEditor = () => {
+  const {
+    blend,
+    space,
+    changeBlend,
+    changeSpace,
+  } = useContext(SettingsGradientContext)
+
   return (
     <div className={styles.container}>
       <div className={styles.containerOptions}>
         <div className={styles.containerContent}>
           <label htmlFor='blend' className={styles.textOption}>Blend:</label>
-          <select id='blend' className={styles.select}>
-            <option name='Normal'>Normal</option>
-            <option name='Overlay'>Overlay</option>
-            <option name='Screen'>Screen</option>
-            <option name='Multiply'>Multiply</option>
-            <option name='Soft Light'>Soft Light</option>
-          </select>
+          <Select
+            value={blend}
+            changeValue={changeBlend}
+            id='blend'
+            options={['Normal', 'Overlay', 'Screen', 'Multiply', 'Soft Light']}
+          />
         </div>
         <div className={styles.containerContent}>
           <label htmlFor='space' className={styles.textOption}>Space:</label>
-          <select id='space' className={styles.select}>
-            <option name='OKLCH'>OKLCH</option>
-            <option name='OKLab'>OKLab</option>
-            <option name='sRGB'>sRGB</option>
-          </select>
+          <Select
+            value={space}
+            changeValue={changeSpace}
+            id='space'
+            options={['OKLCH', 'OKLab', 'sRGB']}
+          />
         </div>
         <label className={styles.containerContent}>
           <input type='checkbox' className={`visually-hidden ${styles.checkbox}`}/>
