@@ -34,7 +34,8 @@ export const PaletteProvider = ({ children }) => {
         const startPerformance = performance.now()
 
         const palette = getPaletteSync(img, { colorCount: 4 })
-        const hexColors = palette.map(color => color.hex())
+        let hexColors = palette.map(color => color.hex())
+        hexColors = [...new Set(hexColors)]
 
         const endPerformance = performance.now()
         const durationPerformance = (endPerformance - startPerformance).toFixed()
