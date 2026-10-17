@@ -1,5 +1,5 @@
 import styles from './StopEditor.module.scss'
-import CustomRange from '@/components/CustomRange/CustomRange.jsx'
+import CustomMultiRange from '@/components/CustomMultiRange/CustomMultiRange.jsx'
 
 const StopEditor = () => {
   return (
@@ -30,7 +30,7 @@ const StopEditor = () => {
         </label>
       </div>
       <div>
-        <CustomRange />
+        <CustomMultiRange />
       </div>
       <div className={styles.containerOptions}>
         <button className={`${styles.buttonStop} ${styles.special}`}>

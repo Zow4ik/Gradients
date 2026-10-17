@@ -1,12 +1,16 @@
 import styles from './GradientMode.module.scss'
 import {useContext} from 'react'
 import {SettingsGradientContext} from '@/context/SettingsGradientContext.jsx'
+import CustomSingleRange
+  from '@/components/CustomSingleRange/CustomSingleRange.jsx'
 
 const GradientMode = () => {
   const {
     gradientMode,
     angle,
     shape,
+    changeModeGradient,
+    changeShape,
   } = useContext(SettingsGradientContext)
 
   const buttonsInfo = [
@@ -28,6 +32,7 @@ const GradientMode = () => {
         {buttonsInfo.map((button) => (
           <button
             key={button.text}
+            onClick={() => changeModeGradient(button.text)}
             className={`${styles.buttonMode} ${button.text === gradientMode ? styles.active: ''}`}
           >
             <img
@@ -47,15 +52,24 @@ const GradientMode = () => {
         <span className={styles.angleDegree}>{angle}°</span>
       </div>
       <div>
-        {/*сейчас от 0 до 100, когда буду делать функционал сделать до 360*/}
-        <input className={styles.range} type='range'/>
+        <CustomSingleRange />
       </div>
       <div className={styles.containerContent}>
         <div className={styles.containerContent}>
           <span className={styles.shape}>Shape:</span>
           <div className={styles.containerContent}>
-            <button className={`${styles.shapeButton} ${shape === 'ellipse' ? styles.active : ''}`}>Ellipse</button>
-            <button className={`${styles.shapeButton} ${shape === 'circle' ? styles.active : ''}`}>Circle</button>
+            <button
+              onClick={() => changeShape('ellipse')}
+              className={`${styles.shapeButton} ${shape === 'ellipse' ? styles.active : ''}`}
+            >
+              Ellipse
+            </button>
+            <button
+              onClick={() => changeShape('circle')}
+              className={`${styles.shapeButton} ${shape === 'circle' ? styles.active : ''}`}
+            >
+              Circle
+            </button>
           </div>
         </div>
         <p className={styles.pos}>

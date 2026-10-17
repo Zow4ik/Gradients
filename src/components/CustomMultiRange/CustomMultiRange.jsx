@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
-import styles from './CustomRange.module.scss'
+import styles from './CustomMultiRange.module.scss'
 
-function CustomRange() {
+function CustomMultiRange() {
   const initial_stops = [
     { id: '1', color: '#FF6B6B', position: 0 },
     { id: '2', color: '#FFA07A', position: 25 },
@@ -76,4 +76,4 @@ function CustomRange() {
   )
 }
 
-export default CustomRange
+export default CustomMultiRange
