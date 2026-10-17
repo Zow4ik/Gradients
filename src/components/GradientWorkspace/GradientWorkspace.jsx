@@ -7,10 +7,29 @@ import StopEditor from '@/components/StopEditor/StopEditor.jsx'
 
 const GradientWorkspace = () => {
   const {
-    file,
+    nameFile,
     performance,
     dominantColors,
+    imageUrl,
   } = useContext(GeneratorContext)
+
+  let image = null
+
+  if (imageUrl) {
+    image = <img
+      src={imageUrl}
+      alt=""
+      loading="lazy"
+    />
+  } else {
+    image = <img
+      src="/Gradients/images/default-image-generator.jpg"
+      alt=""
+      width="628"
+      height="580"
+      loading="lazy"
+    />
+  }
 
   return (
     <div>
@@ -23,19 +42,13 @@ const GradientWorkspace = () => {
             height="12"
             loading="lazy"
           />
-          <span className={styles.nameFile}>{file}</span>
+          <span className={styles.nameFile}>{nameFile}</span>
         </div>
-        <span className={styles.performance}>{performance}</span>
+        <span className={styles.performance}>QUANTIZED IN {performance}MS</span>
       </div>
       <div className={styles.mainContainer}>
         <div className={styles.imageContainer}>
-          <img
-            src="/Gradients/images/default-image-generator.jpg"
-            alt=""
-            width=""
-            height=""
-            loading="lazy"
-          />
+          {image}
           <span className={styles.imageText}>{dominantColors}</span>
         </div>
         <div className={styles.toolsContainer}>
