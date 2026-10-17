@@ -1,9 +1,8 @@
 import styles from './StopEditor.module.scss'
 import CustomMultiRange from '@/components/CustomMultiRange/CustomMultiRange.jsx'
-import Select from '@/components/Select/Select.jsx'
 import { useContext } from 'react'
 import { SettingsGradientContext } from '@/context/SettingsGradientContext.jsx'
-import { PaletteContext } from '@/context/PaletteContext.jsx' // 1. Импортируем контекст палитры
+import { PaletteContext } from '@/context/PaletteContext.jsx'
 
 const StopEditor = () => {
   const {
@@ -15,7 +14,6 @@ const StopEditor = () => {
     changeGrain,
   } = useContext(SettingsGradientContext)
 
-  // 2. Достаем стопы и функции управления из контекста палитры
   const {
     stops,
     addStop,
@@ -26,36 +24,6 @@ const StopEditor = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.containerOptions}>
-        <div className={styles.containerContent}>
-          <label htmlFor='blend' className={styles.textOption}>Blend:</label>
-          <Select
-            value={blend}
-            changeValue={changeBlend}
-            id='blend'
-            options={['Normal', 'Overlay', 'Screen', 'Multiply', 'Soft Light']}
-          />
-        </div>
-        <div className={styles.containerContent}>
-          <label htmlFor='space' className={styles.textOption}>Space:</label>
-          <Select
-            value={space}
-            changeValue={changeSpace}
-            id='space'
-            options={['OKLCH', 'OKLab', 'sRGB']}
-          />
-        </div>
-        <label className={styles.containerContent}>
-          <input
-            checked={grain}
-            onChange={(event) => changeGrain(event.target.checked)}
-            type='checkbox'
-            className={`visually-hidden ${styles.checkbox}`}
-          />
-          <span className={styles.emulator}></span>
-          <span className={styles.textOption}>Grain</span>
-        </label>
-      </div>
       <div>
         <CustomMultiRange />
       </div>

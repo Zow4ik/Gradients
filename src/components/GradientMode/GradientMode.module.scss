@@ -37,15 +37,10 @@
 
 .containerMode {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   background: #0a0e14;
   padding: 5px;
   border-radius: 8px;
-
-  @media (max-width: 500px) {
-    & {}
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .buttonMode {

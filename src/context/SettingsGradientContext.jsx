@@ -8,57 +8,21 @@ export const SettingsGradientProvider = (props) => {
   } = props
 
   const [settings, setSettings] = useState({
-    gradientMode: 'Linear',
+    gradientMode: 'linear',
     angle: 180,
     shape: 'circle',
-    blend: 'normal',
-    space: 'oklch',
-    grain: false,
-    countStops: 4,
   })
 
-  console.log(settings)
-
   function changeModeGradient(newMode) {
-    setSettings((prev) => ({
-      ...prev,
-      gradientMode: newMode,
-    }))
+    setSettings((prev) => ({ ...prev, gradientMode: newMode, }))
   }
 
   function changeShape(newShape) {
-    setSettings((prev) => ({
-      ...prev,
-      shape: newShape,
-    }))
+    setSettings((prev) => ({ ...prev, shape: newShape, }))
   }
 
   function changeAngle(newAngle) {
-    setSettings((prev) => ({
-      ...prev,
-      angle: newAngle,
-    }))
-  }
-
-  function changeBlend(newBlend) {
-    setSettings((prev) => ({
-      ...prev,
-      blend: newBlend,
-    }))
-  }
-
-  function changeSpace(newSpace) {
-    setSettings((prev) => ({
-      ...prev,
-      space: newSpace,
-    }))
-  }
-
-  function changeGrain(newGrain) {
-    setSettings((prev) => ({
-      ...prev,
-      grain: newGrain,
-    }))
+    setSettings((prev) => ({ ...prev, angle: newAngle, }))
   }
 
   return (
@@ -68,9 +32,6 @@ export const SettingsGradientProvider = (props) => {
         changeModeGradient,
         changeShape,
         changeAngle,
-        changeBlend,
-        changeSpace,
-        changeGrain,
       }}
     >
       {children}

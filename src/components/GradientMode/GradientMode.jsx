@@ -17,14 +17,11 @@ const GradientMode = () => {
     { nameImage: 'linear', text: 'Linear' },
     { nameImage: 'radial', text: 'Radial' },
     { nameImage: 'conic', text: 'Conic' },
-    { nameImage: 'rep-lin', text: 'Rep. Lin' },
-    { nameImage: 'rep-rad', text: 'Rep. Rad' },
-    { nameImage: 'mesh', text: 'Mesh' },
   ]
 
-  const angleShow = ['Linear', 'Conic', 'Rep. Lin'].includes(gradientMode)
-  const shapeShow = ['Radial', 'Rep. Rad'].includes(gradientMode)
-  const positionShow = ['Radial', 'Conic', 'Rep. Rad'].includes(gradientMode)
+  const angleShow = ['Linear', 'Conic'].includes(gradientMode)
+  const shapeShow = ['Radial'].includes(gradientMode)
+  const positionShow = ['Radial', 'Conic'].includes(gradientMode)
 
   return (
     <div className={styles.gradientMode}>
