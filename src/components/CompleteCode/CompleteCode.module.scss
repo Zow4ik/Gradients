@@ -29,6 +29,7 @@
 .buttons {
   display: flex;
   gap: 18px;
+  flex-wrap: wrap;
 }
 
 .button {
@@ -50,9 +51,15 @@
   font-size: 11px;
   line-height: 2;
   color: #8b949e;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 
-.pre {}
+.pre {
+  overflow-x: auto;
+}
 
 .code {
   font-size: 13px;
