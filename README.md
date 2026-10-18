@@ -1,16 +1,28 @@
-# React + Vite
+# 🎨 Gradients
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Turn any photo into a CSS gradient. Zero API, all in your browser.**
 
-Currently, two official plugins are available:
+Gradients — это легковесный инструмент для дизайнеров и разработчиков, который позволяет мгновенно извлекать цветовую палитру из любого изображения и генерировать готовый CSS-код.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Фишки
+*   **Приватность (Zero API):** Фото не загружаются на сервер. Вся работа (сжатие, извлечение палитры) происходит прямо в браузере.
+*   **Скорость:** Палитра извлекается за < 100 миллисекунд благодаря `colorthief` и `picsquish`.
+*   **Готовый код:** Экспорт градиента в CSS, Tailwind, SCSS и SVG в один клик.
+*   **Гибкость:** Настройка режимов (Linear, Radial, Conic), углов, Drag-n-Drop стопов и их количества (от 2 до 4).
 
-## React Compiler
+## 🛠 Стек
+*   **React 18** + **Vite**
+*   **SCSS** (модули)
+*   **Библиотеки:** `colorthief`, `picsquish`, `color-2-name`, `lucide-react`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Локальный запуск
 
-## Expanding the ESLint configuration
+```bash
+# 1. Клонируйте репозиторий
+git clone https://github.com/your-username/gradients.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 2. Установите зависимости
+npm install
+
+# 3. Запустите dev-сервер
+npm run dev
