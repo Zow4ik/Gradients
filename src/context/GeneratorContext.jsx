@@ -1,5 +1,5 @@
-import {createContext, useState} from 'react'
-import {squish} from 'picsquish'
+import { createContext, useState } from 'react'
+import { squish } from 'picsquish'
 
 export const GeneratorContext = createContext([])
 

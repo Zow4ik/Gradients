@@ -1,10 +1,10 @@
 import styles from './GradientWorkspace.module.scss'
-import {useContext} from 'react'
-import {GeneratorContext} from '@/context/GeneratorContext.jsx'
+import { useContext } from 'react'
+import { GeneratorContext } from '@/context/GeneratorContext.jsx'
 import ExtractColors from '@/components/ExtractColors/ExtractColors.jsx'
 import GradientMode from '@/components/GradientMode/GradientMode.jsx'
 import StopEditor from '@/components/StopEditor/StopEditor.jsx'
-import {PaletteContext} from '@/context/PaletteContext.jsx'
+import { PaletteContext } from '@/context/PaletteContext.jsx'
 
 const GradientWorkspace = () => {
   const {

@@ -1,6 +1,6 @@
 import styles from './GradientMode.module.scss'
-import {useContext} from 'react'
-import {SettingsGradientContext} from '@/context/SettingsGradientContext.jsx'
+import { useContext } from 'react'
+import { SettingsGradientContext } from '@/context/SettingsGradientContext.jsx'
 import CustomSingleRange
   from '@/components/CustomSingleRange/CustomSingleRange.jsx'
 

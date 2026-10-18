@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "color-2-name": "^1.5.2",
-    "colorthief": "^3.5.0",
-    "picsquish": "^1.0.4",
+    "color-2-name": "1.5.2",
+    "colorthief": "3.5.0",
+    "picsquish": "1.0.4",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },

@@ -7,8 +7,15 @@ const CompleteCode = () => {
   const [activeButton, setActiveButton] = useState('CSS')
   const [isCopied, setIsCopied] = useState(false)
 
-  const { stops } = useContext(PaletteContext)
-  const { gradientMode, angle, shape } = useContext(SettingsGradientContext)
+  const {
+    stops
+  } = useContext(PaletteContext)
+
+  const {
+    gradientMode,
+    angle,
+    shape
+  } = useContext(SettingsGradientContext)
 
   const buttons = ['CSS', 'Tailwind', 'SCSS', 'SVG']
 

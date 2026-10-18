@@ -1,7 +1,13 @@
+const originalWarn = console.warn
+console.warn = (...args) => {
+  if (args[0]?.includes?.('Invalid Hex value')) return
+  originalWarn(...args)
+}
+
 import styles from './ExtractColors.module.scss'
-import {useContext} from 'react'
-import {PaletteContext} from '@/context/PaletteContext.jsx'
-import {closest} from 'color-2-name'
+import { useContext } from 'react'
+import { PaletteContext } from '@/context/PaletteContext.jsx'
+import { closest } from 'color-2-name'
 
 const ExtractColors = () => {
   const {

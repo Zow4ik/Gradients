@@ -3,7 +3,10 @@ import styles from './CustomMultiRange.module.scss'
 import { PaletteContext } from '@/context/PaletteContext.jsx'
 
 function CustomMultiRange() {
-  const { stops, setStops } = useContext(PaletteContext)
+  const {
+    stops,
+    setStops
+  } = useContext(PaletteContext)
 
   const trackRef = useRef(null)
   const dragRef = useRef(null)

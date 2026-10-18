@@ -1,6 +1,6 @@
 import styles from './UploadButton.module.scss'
-import {useContext} from 'react'
-import {GeneratorContext} from '@/context/GeneratorContext.jsx'
+import { useContext } from 'react'
+import { GeneratorContext } from '@/context/GeneratorContext.jsx'
 
 const UploadButton = (props) => {
   const {

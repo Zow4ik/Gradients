@@ -1,6 +1,6 @@
 import styles from './CustomSingleRange.module.scss'
-import {useContext, useState} from 'react'
-import {SettingsGradientContext} from '@/context/SettingsGradientContext.jsx'
+import { useContext } from 'react'
+import { SettingsGradientContext } from '@/context/SettingsGradientContext.jsx'
 
 const CustomSingleRange = () => {
   const {

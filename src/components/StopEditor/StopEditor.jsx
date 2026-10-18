@@ -1,19 +1,9 @@
 import styles from './StopEditor.module.scss'
 import CustomMultiRange from '@/components/CustomMultiRange/CustomMultiRange.jsx'
 import { useContext } from 'react'
-import { SettingsGradientContext } from '@/context/SettingsGradientContext.jsx'
 import { PaletteContext } from '@/context/PaletteContext.jsx'
 
 const StopEditor = () => {
-  const {
-    blend,
-    space,
-    grain,
-    changeBlend,
-    changeSpace,
-    changeGrain,
-  } = useContext(SettingsGradientContext)
-
   const {
     stops,
     addStop,

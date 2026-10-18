@@ -1,6 +1,6 @@
 import styles from './OverlayFile.module.scss'
-import {useContext, useEffect, useRef, useState} from 'react'
-import {GeneratorContext} from '@/context/GeneratorContext.jsx'
+import { useContext, useEffect, useRef, useState } from 'react'
+import { GeneratorContext } from '@/context/GeneratorContext.jsx'
 
 const OverlayFile = () => {
   const [isDrag, setIsDrag] = useState(false)
