@@ -1,4 +1,5 @@
-import { createContext, useState } from 'react'
+import { createContext } from 'react'
+import { useSettingsGradient } from '@/hooks/useSettingsGradient.js'
 
 export const SettingsGradientContext = createContext([])
 
@@ -7,23 +8,12 @@ export const SettingsGradientProvider = (props) => {
     children
   } = props
 
-  const [settings, setSettings] = useState({
-    gradientMode: 'Linear',
-    angle: 180,
-    shape: 'circle',
-  })
-
-  function changeModeGradient(newMode) {
-    setSettings((prev) => ({ ...prev, gradientMode: newMode, }))
-  }
-
-  function changeShape(newShape) {
-    setSettings((prev) => ({ ...prev, shape: newShape, }))
-  }
-
-  function changeAngle(newAngle) {
-    setSettings((prev) => ({ ...prev, angle: newAngle, }))
-  }
+  const {
+    settings,
+    changeModeGradient,
+    changeShape,
+    changeAngle,
+  } = useSettingsGradient()
 
   return (
     <SettingsGradientContext.Provider

@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import {usePalette} from '@/hooks/usePalette.jsx'
+import {usePalette} from '@/hooks/usePalette.js'
 
 export const PaletteContext = createContext([])
 

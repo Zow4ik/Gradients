@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import {useGenerator} from '@/hooks/useGenerator.jsx'
+import {useGenerator} from '@/hooks/useGenerator.js'
 
 export const GeneratorContext = createContext([])
 
