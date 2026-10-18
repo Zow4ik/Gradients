@@ -14,7 +14,7 @@ const GradientWorkspace = () => {
   } = useContext(GeneratorContext)
 
   const {
-    dominantColors,
+    colors,
   } = useContext(PaletteContext)
 
   let image = null
@@ -53,7 +53,7 @@ const GradientWorkspace = () => {
       <div className={styles.mainContainer}>
         <div className={styles.imageContainer}>
           {image}
-          <span className={styles.imageText}>{dominantColors} Dominant Samples</span>
+          <span className={styles.imageText}>{colors.length} Dominant Samples</span>
         </div>
         <div className={styles.toolsContainer}>
           <ExtractColors />
