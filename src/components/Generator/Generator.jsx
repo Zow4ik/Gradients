@@ -17,7 +17,7 @@ const Generator = () => {
           spanText2='PNG, JPG, WebP up to 25MB'
         />
       </div>
-      <div className={styles.containerContent}>
+      <div id='generator' className={styles.containerContent}>
         <GradientWorkspace />
         <GradientPreview />
         <CompleteCode />
