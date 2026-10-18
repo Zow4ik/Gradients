@@ -2,6 +2,7 @@ import styles from './Generator.module.scss'
 import TitleBlock from '@/components/TitleBlock/TitleBlock.jsx'
 import GradientWorkspace from '@/components/GradientWorkspace/GradientWorkspace.jsx'
 import GradientPreview from '@/components/GradientPreview/GradientPreview.jsx'
+import CompleteCode from '@/components/CompleteCode/CompleteCode.jsx'
 
 const Generator = () => {
   return (
@@ -19,6 +20,7 @@ const Generator = () => {
       <div className={styles.containerContent}>
         <GradientWorkspace />
         <GradientPreview />
+        <CompleteCode />
       </div>
     </section>
   )

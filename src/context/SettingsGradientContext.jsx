@@ -8,7 +8,7 @@ export const SettingsGradientProvider = (props) => {
   } = props
 
   const [settings, setSettings] = useState({
-    gradientMode: 'default',
+    gradientMode: 'Linear',
     angle: 180,
     shape: 'circle',
   })
