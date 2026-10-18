@@ -9,7 +9,7 @@ const Menu = () => {
     <nav>
       <ul className={styles.list}>
         {items.map((item) => (
-          <li key={item.text} className={styles.item}>
+          <li key={item.text}>
             <a href={item.href} className={`${styles.link} ${styles.active}`}>{item.text}</a>
           </li>
         ))}

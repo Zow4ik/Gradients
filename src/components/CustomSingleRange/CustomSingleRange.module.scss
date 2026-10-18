@@ -8,7 +8,6 @@
   cursor: pointer;
   margin: 0;
 
-  // ── Chrome / Safari / Edge ──
   &::-webkit-slider-runnable-track {
     height: 4px;
     background: #30363D;
@@ -29,7 +28,6 @@
     margin-top: -5px;
   }
 
-  // ── Firefox ──
   &::-moz-range-track {
     height: 4px;
     background: #30363D;
